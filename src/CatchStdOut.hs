@@ -7,6 +7,7 @@ import GHC.IO.Handle
 import System.IO
 import System.Directory
 
+-- Captures the stdout produced by running function f, and provides it as a string.
 catchOutput :: IO () -> IO String
 catchOutput f = do
   tmpd <- getTemporaryDirectory
@@ -19,4 +20,3 @@ catchOutput f = do
   str <- readFile tmpf
   removeFile tmpf
   return str
-
