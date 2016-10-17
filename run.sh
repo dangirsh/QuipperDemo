@@ -1,1 +1,0 @@
-quipper Main.hs && ./Main > circuit.eps && thunar circuit.eps

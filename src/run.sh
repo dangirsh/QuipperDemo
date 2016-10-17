@@ -1,0 +1,1 @@
+quipper Main.hs && ./Main
