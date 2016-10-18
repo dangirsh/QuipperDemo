@@ -1,7 +1,7 @@
 QuipperDemo
 ============
 
-This is a demonstration of several ways [Quipper](http://www.mathstat.dal.ca/~selinger/quipper/) can be used in designing circuits for quantum computing. More importantly, it's an excuse to play with [Haskell](https://www.haskell.org/) and quantum information processing at the same time! I created a [writeup](writeup/writeup.pdf) as to submit for my [CS4812](https://courses.cit.cornell.edu/physics4481-7681_2014sp/) final project. It contains more details than this README, and might be useful for understanding the purpose of each function.
+This is a demonstration of several ways [Quipper](http://www.mathstat.dal.ca/~selinger/quipper/) can be used in designing circuits for quantum computing. More importantly, it's an excuse to play with [Haskell](https://www.haskell.org/) and quantum information processing at the same time! I created a [writeup](writeup/writeup.pdf) which contains more details than this README. 
 
 # Key Features Demonstrated
 
