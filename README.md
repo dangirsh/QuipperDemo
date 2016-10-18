@@ -10,7 +10,7 @@ This is a demonstration of several ways [Quipper](http://www.mathstat.dal.ca/~se
 - Deterministic simulation of the quantum circuits.
 
 
-# Source Overview:
+# Source Overview
 
 - [Main.hs](src/Main.hs)
   - `qft`: A direct implementation of the [quantum fourier transform (QFT)](https://en.wikipedia.org/wiki/Quantum_Fourier_transform) using rotation, hadamard, and cnot gates.
