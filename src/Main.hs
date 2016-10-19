@@ -69,12 +69,16 @@ output_circuit_diagrams = do
         input_shape = replicate n qubit
 
 
+-- UNTESTED
 -- simulate each circuit num_sims times and return the error rate
+-- Here, the error rate is the percentage of simulation pairs with differing measurements.
+-- The same random seed is passed to both simulations, with the intent that any discrepancy is 
+-- due to the differences in the circuits. TODO: Check that this isn't a horribly incorrect assumption.
 compare_circuits :: QFunc -> QFunc -> Int -> Double
 compare_circuits c1 c2 num_sims = error_rate
     where
         error_rate = fromIntegral (length (filter id results)) / fromIntegral num_sims
-        results = [meas g (sim c1 g) == meas g (sim c2 g) | s <- [1..num_sims], let g = mkStdGen s]
+        results = [meas g (sim c1 g) /= meas g (sim c2 g) | s <- [1..num_sims], let g = mkStdGen s]
         sim circuit g = map snd . toAscList $ sim_amps g circuit $ input_state g
         input_state = make_state . normalize . take n . make_amplititudes . randoms
         make_state = fromList . zip basis_states
